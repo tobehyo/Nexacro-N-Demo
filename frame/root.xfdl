@@ -174,13 +174,13 @@ this.divFloating_btnContact_onclick = function(obj:nexacro.Button,e:nexacro.Clic
 	
 	system.execDefaultBrowser(url);
 	
-	if (system.navigatorname.indexOf("nexacro") == -1) {
-		gtag('event', 'Button Click', {
-			'event_category': "Link",
-			'event_label': 'Go to Ask',
-			'value': url
-		});
-	}
+// 	if (system.navigatorname.indexOf("nexacro") == -1) {
+// 		gtag('event', 'Button Click', {
+// 			'event_category': "Link",
+// 			'event_label': 'Go to Ask',
+// 			'value': url
+// 		});
+// 	}
 };
 
 this.divFloating_btnToTop_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
@@ -193,13 +193,13 @@ this.divFloating_btnDesc_onclick = function(obj:nexacro.Button,e:nexacro.ClickEv
 	var form = this.divWork.form;
 	form["showDescription"].call(form);
 	
-	if (system.navigatorname.indexOf("nexacro") == -1) {
-		gtag('event', 'Button Click', {
-			'event_category': "Description",
-			'event_label': 'Description',
-			'value': form.menuInfo.menuName
-		});
-	}
+// 	if (system.navigatorname.indexOf("nexacro") == -1) {
+// 		gtag('event', 'Button Click', {
+// 			'event_category': "Description",
+// 			'event_label': 'Description',
+// 			'value': form.menuInfo.menuName
+// 		});
+// 	}
 };
 
 this.setDescVisible = function(flag)
@@ -236,13 +236,13 @@ this.root_onlayoutchanged = function(obj:nexacro.Form,e:nexacro.LayoutChangeEven
 		}
 	}
 	
-	if (system.navigatorname.indexOf("nexacro") == -1) {
-		gtag('event', 'Layout Changed', {
-			'event_category': "MLM",
-			'event_label': 'MLM',
-			'value': e.oldlayout + " → " + e.newlayout
-		});
-	}
+// 	if (system.navigatorname.indexOf("nexacro") == -1) {
+// 		gtag('event', 'Layout Changed', {
+// 			'event_category': "MLM",
+// 			'event_label': 'MLM',
+// 			'value': e.oldlayout + " → " + e.newlayout
+// 		});
+// 	}
 };
 ]]></Script>
   </Form>

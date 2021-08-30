@@ -59,13 +59,13 @@ this.btnTheme_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 	nexacro.loadStyle("xcssrc::demo_"+themeMode+".xcss");
 	trace("[테마 변경] xcssrc::demo_"+themeMode+".xcss");
 	
-	if (system.navigatorname.indexOf("nexacro") == -1) {
-		gtag('event', 'Button Click', {
-			'event_category': "Change Theme",
-			'event_label': 'Change Theme',
-			'value': themeMode=="L"?"Light":"Dark"
-		});
-	}
+// 	if (system.navigatorname.indexOf("nexacro") == -1) {
+// 		gtag('event', 'Button Click', {
+// 			'event_category': "Change Theme",
+// 			'event_label': 'Change Theme',
+// 			'value': themeMode=="L"?"Light":"Dark"
+// 		});
+// 	}
 };
 
 this.btnMegaMenu_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
@@ -73,12 +73,12 @@ this.btnMegaMenu_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 	var p = this.parent.parent;
 	p["showMegaMenu"].call(p);
 	
-	if (system.navigatorname.indexOf("nexacro") == -1) {
-		gtag('event', 'Button Click', {
-			'event_category': "Mega Menu",
-			'event_label': 'Mega Menu'
-		});
-	}
+// 	if (system.navigatorname.indexOf("nexacro") == -1) {
+// 		gtag('event', 'Button Click', {
+// 			'event_category': "Mega Menu",
+// 			'event_label': 'Mega Menu'
+// 		});
+// 	}
 };
 
 this.createMenuButton = function()
@@ -115,13 +115,13 @@ this.btnMenu_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 		menuNm = obj.text;
 	p["showSubMenu"].call(p, menuId, menuNm);
 	
-	if (system.navigatorname.indexOf("nexacro") == -1) {
-		gtag('event', 'Button Click', {
-			'event_category': "Sub Menu",
-			'event_label': 'Sub Menu',
-			'value': menuNm
-		});
-	}
+// 	if (system.navigatorname.indexOf("nexacro") == -1) {
+// 		gtag('event', 'Button Click', {
+// 			'event_category': "Sub Menu",
+// 			'event_label': 'Sub Menu',
+// 			'value': menuNm
+// 		});
+// 	}
 };
 
 this.btnBack_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
@@ -135,12 +135,12 @@ this.btnMobileMenu_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInf
 {
 	this.openPopup("mobilemenu", "frame::mobilemenu.xfdl", null, "showtitlebar=false autosize=false openstatus=maximize", "popupCallback");
 	
-	if (system.navigatorname.indexOf("nexacro") == -1) {
-		gtag('event', 'Button Click', {
-			'event_category': "Mobile Menu",
-			'event_label': 'Mobile Menu'
-		});
-	}
+// 	if (system.navigatorname.indexOf("nexacro") == -1) {
+// 		gtag('event', 'Button Click', {
+// 			'event_category': "Mobile Menu",
+// 			'event_label': 'Mobile Menu'
+// 		});
+// 	}
 };
 
 this.popupCallback = function(id, variant)

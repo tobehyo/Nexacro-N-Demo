@@ -103,17 +103,17 @@ this.changeLanguage = function(langCode)
 			
 			pThis.langCode = langCode;
 			
-			if (system.navigatorname.indexOf("nexacro") == -1) {
-				gtag('event', 'select_content', {
-					content_type: "changeLanguage",
-					items: [
-						{
-							id: langCode,
-							name: langCode=="ko"?"Korean":"English"
-						}
-					]
-				});
-			}
+// 			if (system.navigatorname.indexOf("nexacro") == -1) {
+// 				gtag('event', 'select_content', {
+// 					content_type: "changeLanguage",
+// 					items: [
+// 						{
+// 							id: langCode,
+// 							name: langCode=="ko"?"Korean":"English"
+// 						}
+// 					]
+// 				});
+// 			}
 		}
 	};
 };

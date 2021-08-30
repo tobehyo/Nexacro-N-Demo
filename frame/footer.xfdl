@@ -48,13 +48,13 @@ this.Div00_Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventIn
 		url = app.langCode=="en"?"http://www.nexacro.com/":"http://www.tobesoft.co.kr/";
 	system.execDefaultBrowser(url);
 	
-	if (system.navigatorname.indexOf("nexacro") == -1) {
-		gtag('event', 'Button Click', {
-			'event_category': "Link",
-			'event_label': 'Company',
-			'value': url
-		});
-	}
+// 	if (system.navigatorname.indexOf("nexacro") == -1) {
+// 		gtag('event', 'Button Click', {
+// 			'event_category': "Link",
+// 			'event_label': 'Company',
+// 			'value': url
+// 		});
+// 	}
 };
 
 this.Div00_Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
@@ -62,13 +62,13 @@ this.Div00_Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventIn
 	var url = "http://tobetong.com/";
 	system.execDefaultBrowser(url);
 	
-	if (system.navigatorname.indexOf("nexacro") == -1) {
-		gtag('event', 'Button Click', {
-			'event_category': "Link",
-			'event_label': 'Tobetong',
-			'value': url
-		});
-	}
+// 	if (system.navigatorname.indexOf("nexacro") == -1) {
+// 		gtag('event', 'Button Click', {
+// 			'event_category': "Link",
+// 			'event_label': 'Tobetong',
+// 			'value': url
+// 		});
+// 	}
 };
 
 this.Div00_Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
@@ -76,13 +76,13 @@ this.Div00_Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventIn
 	var url = "http://support.tobesoft.co.kr/";
 	system.execDefaultBrowser(url);
 	
-	if (system.navigatorname.indexOf("nexacro") == -1) {
-		gtag('event', 'Button Click', {
-			'event_category': "Link",
-			'event_label': 'Support',
-			'value': url
-		});
-	}
+// 	if (system.navigatorname.indexOf("nexacro") == -1) {
+// 		gtag('event', 'Button Click', {
+// 			'event_category': "Link",
+// 			'event_label': 'Support',
+// 			'value': url
+// 		});
+// 	}
 };
 
 this.Div00_Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
@@ -90,13 +90,13 @@ this.Div00_Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventIn
 	var url = "http://support.tobesoft.co.kr/Next_JSP/nexacroHome/index.html#schedule=NP17";
 	system.execDefaultBrowser(url);
 	
-	if (system.navigatorname.indexOf("nexacro") == -1) {
-		gtag('event', 'Button Click', {
-			'event_category': "Link",
-			'event_label': 'Education',
-			'value': url
-		});
-	}
+// 	if (system.navigatorname.indexOf("nexacro") == -1) {
+// 		gtag('event', 'Button Click', {
+// 			'event_category': "Link",
+// 			'event_label': 'Education',
+// 			'value': url
+// 		});
+// 	}
 };
 
 this.Div00_Button04_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
@@ -104,13 +104,13 @@ this.Div00_Button04_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventIn
 	var url = "http://docs.tobesoft.com/";
 	system.execDefaultBrowser(url);
 	
-	if (system.navigatorname.indexOf("nexacro") == -1) {
-		gtag('event', 'Button Click', {
-			'event_category': "Link",
-			'event_label': 'Technical Documents',
-			'value': url
-		});
-	}
+// 	if (system.navigatorname.indexOf("nexacro") == -1) {
+// 		gtag('event', 'Button Click', {
+// 			'event_category': "Link",
+// 			'event_label': 'Technical Documents',
+// 			'value': url
+// 		});
+// 	}
 };
 ]]></Script>
   </Form>
