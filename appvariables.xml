@@ -6,6 +6,8 @@
         <Column id="id" type="STRING" size="256"/>
         <Column id="caption_en" type="STRING" size="256"/>
         <Column id="caption_ko" type="STRING" size="256"/>
+        <Column id="caption_zh" type="STRING" size="256"/>
+        <Column id="caption_ja" type="STRING" size="256"/>
         <Column id="level" type="STRING" size="256"/>
         <Column id="upid" type="STRING" size="256"/>
         <Column id="desktop" type="STRING" size="256"/>
@@ -25,6 +27,8 @@
           <Col id="nre">1</Col>
           <Col id="wre">1</Col>
           <Col id="caption_ko">그리드</Col>
+          <Col id="caption_zh">网格</Col>
+          <Col id="caption_ja">グリッド</Col>
         </Row>
         <Row>
           <Col id="id">010100</Col>
@@ -37,6 +41,8 @@
           <Col id="wre">1</Col>
           <Col id="url">grid::function.xfdl</Col>
           <Col id="caption_ko">기본 기능</Col>
+          <Col id="caption_zh">基本功能</Col>
+          <Col id="caption_ja">基本機能</Col>
         </Row>
         <Row>
           <Col id="id">010200</Col>
@@ -49,6 +55,8 @@
           <Col id="wre">1</Col>
           <Col id="url">grid::renderer.xfdl</Col>
           <Col id="caption_ko">다양한 표현</Col>
+          <Col id="caption_zh">渲染器</Col>
+          <Col id="caption_ja">レンダラー</Col>
         </Row>
         <Row>
           <Col id="id">010201</Col>
@@ -61,6 +69,8 @@
           <Col id="wre">1</Col>
           <Col id="nre">1</Col>
           <Col id="url">grid::copypaste.xfdl</Col>
+          <Col id="caption_zh">复制和粘贴</Col>
+          <Col id="caption_ja">コピー&amp;ペースト</Col>
         </Row>
         <Row>
           <Col id="id">010202</Col>
@@ -73,6 +83,8 @@
           <Col id="wre">1</Col>
           <Col id="nre">1</Col>
           <Col id="url">grid::freezepanes.xfdl</Col>
+          <Col id="caption_zh">冻结窗格</Col>
+          <Col id="caption_ja">ペインのフリーズ</Col>
         </Row>
         <Row>
           <Col id="id">010203</Col>
@@ -85,6 +97,8 @@
           <Col id="wre">1</Col>
           <Col id="nre">1</Col>
           <Col id="url">grid::smartscroll.xfdl</Col>
+          <Col id="caption_zh">智能滚动</Col>
+          <Col id="caption_ja">スマートスクロール</Col>
         </Row>
         <Row>
           <Col id="id">010300</Col>
@@ -97,6 +111,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">페이징</Col>
           <Col id="url">grid::pagination.xfdl</Col>
+          <Col id="caption_zh">页码化</Col>
+          <Col id="caption_ja">ページング</Col>
         </Row>
         <Row>
           <Col id="id">010400</Col>
@@ -109,6 +125,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">내려받기 &amp; 가져오기</Col>
           <Col id="url">grid::export.xfdl</Col>
+          <Col id="caption_zh">导出和导入</Col>
+          <Col id="caption_ja">エクスポートおよびインポート</Col>
         </Row>
         <Row>
           <Col id="id">010500</Col>
@@ -121,6 +139,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">개인화</Col>
           <Col id="url">grid::personalization.xfdl</Col>
+          <Col id="caption_zh">个性化</Col>
+          <Col id="caption_ja">パーソナライズ</Col>
         </Row>
         <Row>
           <Col id="id">010600</Col>
@@ -133,6 +153,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">대용량 데이터</Col>
           <Col id="url">grid::largedata.xfdl</Col>
+          <Col id="caption_zh">大数据</Col>
+          <Col id="caption_ja">大規模データ</Col>
         </Row>
         <Row>
           <Col id="id">010700</Col>
@@ -145,6 +167,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">피벗</Col>
           <Col id="url">grid::pivot.xfdl</Col>
+          <Col id="caption_zh">枢轴</Col>
+          <Col id="caption_ja">ピボット</Col>
         </Row>
         <Row>
           <Col id="id">010800</Col>
@@ -157,6 +181,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">드래그 &amp; 드롭</Col>
           <Col id="url">grid::dragndrop.xfdl</Col>
+          <Col id="caption_zh">拖放和拖放</Col>
+          <Col id="caption_ja">ドラッグ&amp;ドロップ</Col>
         </Row>
         <Row>
           <Col id="id">010900</Col>
@@ -169,6 +195,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">동적 그리드</Col>
           <Col id="url">grid::dynamic.xfdl</Col>
+          <Col id="caption_zh">动态网格</Col>
+          <Col id="caption_ja">動的グリッド</Col>
         </Row>
         <Row>
           <Col id="id">011000</Col>
@@ -181,6 +209,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">퀀텀 그리드</Col>
           <Col id="url">grid::quantum.xfdl</Col>
+          <Col id="caption_zh">量子网格</Col>
+          <Col id="caption_ja">量子格子</Col>
         </Row>
         <Row>
           <Col id="id">020000</Col>
@@ -192,6 +222,8 @@
           <Col id="nre">1</Col>
           <Col id="wre">1</Col>
           <Col id="caption_ko">컴포넌트</Col>
+          <Col id="caption_zh">组件</Col>
+          <Col id="caption_ja">コンポーネント</Col>
         </Row>
         <Row>
           <Col id="id">020100</Col>
@@ -204,6 +236,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">기본 컴포넌트</Col>
           <Col id="url">comp::components.xfdl</Col>
+          <Col id="caption_zh">基本组件</Col>
+          <Col id="caption_ja">基本コンポーネント</Col>
         </Row>
         <Row>
           <Col id="id">020200</Col>
@@ -216,6 +250,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">컴포넌트 동적 생성</Col>
           <Col id="url">comp::generate.xfdl</Col>
+          <Col id="caption_zh">动态生成</Col>
+          <Col id="caption_ja">ダイナミック生成</Col>
         </Row>
         <Row>
           <Col id="id">020300</Col>
@@ -228,6 +264,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">Arrangement</Col>
           <Col id="url">comp::arrangement.xfdl</Col>
+          <Col id="caption_zh">安排</Col>
+          <Col id="caption_ja">編曲</Col>
         </Row>
         <Row>
           <Col id="id">020400</Col>
@@ -240,6 +278,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">Fit to Contents</Col>
           <Col id="url">comp::fittocontents.xfdl</Col>
+          <Col id="caption_zh">适合目录</Col>
+          <Col id="caption_ja">コンテンツに適合</Col>
         </Row>
         <Row>
           <Col id="id">020500</Col>
@@ -252,6 +292,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">파일 전송</Col>
           <Col id="url">comp::filetransfer.xfdl</Col>
+          <Col id="caption_zh">文件传输</Col>
+          <Col id="caption_ja">ファイル転送</Col>
         </Row>
         <Row>
           <Col id="id">020600</Col>
@@ -264,6 +306,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">양방향 바인딩</Col>
           <Col id="url">comp::binding.xfdl</Col>
+          <Col id="caption_zh">双向数据绑定</Col>
+          <Col id="caption_ja">双方向データバインディング</Col>
         </Row>
         <Row>
           <Col id="id">020700</Col>
@@ -276,6 +320,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">다양한 메뉴 표현</Col>
           <Col id="url">comp::menu.xfdl</Col>
+          <Col id="caption_zh">菜单</Col>
+          <Col id="caption_ja">メニュー</Col>
         </Row>
         <Row>
           <Col id="id">020800</Col>
@@ -288,6 +334,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">리스트뷰</Col>
           <Col id="url">comp::listview.xfdl</Col>
+          <Col id="caption_zh">列表视图</Col>
+          <Col id="caption_ja">リストビュー</Col>
         </Row>
         <Row>
           <Col id="id">020900</Col>
@@ -300,6 +348,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">애니메이션</Col>
           <Col id="url">comp::animation.xfdl</Col>
+          <Col id="caption_zh">动画片</Col>
+          <Col id="caption_ja">アニメーション</Col>
         </Row>
         <Row>
           <Col id="id">021000</Col>
@@ -312,6 +362,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">차트</Col>
           <Col id="url">comp::chart.xfdl</Col>
+          <Col id="caption_zh">图表</Col>
+          <Col id="caption_ja">チャート</Col>
         </Row>
         <Row>
           <Col id="id">021100</Col>
@@ -324,6 +376,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">그래픽스</Col>
           <Col id="url">comp::graphics.xfdl</Col>
+          <Col id="caption_zh">图形学</Col>
+          <Col id="caption_ja">グラフィック</Col>
         </Row>
         <Row>
           <Col id="id">021200</Col>
@@ -336,6 +390,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">구글 지도</Col>
           <Col id="url">comp::googlemap.xfdl</Col>
+          <Col id="caption_zh">Googoogle地图</Col>
+          <Col id="caption_ja">Googleマップ</Col>
         </Row>
         <Row>
           <Col id="id">030000</Col>
@@ -347,6 +403,8 @@
           <Col id="nre">1</Col>
           <Col id="wre">0</Col>
           <Col id="caption_ko">디바이스</Col>
+          <Col id="caption_zh">设备</Col>
+          <Col id="caption_ja">デバイス</Col>
         </Row>
         <Row>
           <Col id="id">030100</Col>
@@ -359,6 +417,8 @@
           <Col id="wre">0</Col>
           <Col id="caption_ko">카메라</Col>
           <Col id="url">device::camera.xfdl</Col>
+          <Col id="caption_zh">照相机</Col>
+          <Col id="caption_ja">カメラ</Col>
         </Row>
         <Row>
           <Col id="id">030200</Col>
@@ -371,6 +431,8 @@
           <Col id="wre">0</Col>
           <Col id="caption_ko">블루투스 Low Energy</Col>
           <Col id="url">device::bluetooth.xfdl</Col>
+          <Col id="caption_zh">低能蓝牙</Col>
+          <Col id="caption_ja">Bluetooth低エネルギー</Col>
         </Row>
         <Row>
           <Col id="id">030300</Col>
@@ -383,6 +445,8 @@
           <Col id="wre">0</Col>
           <Col id="caption_ko">연락처</Col>
           <Col id="url">device::contacts.xfdl</Col>
+          <Col id="caption_zh">联系方式</Col>
+          <Col id="caption_ja">連絡先</Col>
         </Row>
         <Row>
           <Col id="id">030400</Col>
@@ -395,6 +459,8 @@
           <Col id="wre">0</Col>
           <Col id="caption_ko">로컬 데이터베이스</Col>
           <Col id="url">device::database.xfdl</Col>
+          <Col id="caption_zh">Lite数据库</Col>
+          <Col id="caption_ja">Liteデータベース</Col>
         </Row>
         <Row>
           <Col id="id">030500</Col>
@@ -407,6 +473,8 @@
           <Col id="wre">0</Col>
           <Col id="caption_ko">파일 읽기 &amp; 쓰기</Col>
           <Col id="url">device::file.xfdl</Col>
+          <Col id="caption_zh">文件的读写</Col>
+          <Col id="caption_ja">ファイルの読み取りと書き込み</Col>
         </Row>
         <Row>
           <Col id="id">030600</Col>
@@ -419,6 +487,8 @@
           <Col id="wre">0</Col>
           <Col id="caption_ko">음성 인식</Col>
           <Col id="url">device::voice.xfdl</Col>
+          <Col id="caption_zh">语音识别</Col>
+          <Col id="caption_ja">音声認識</Col>
         </Row>
         <Row>
           <Col id="id">040000</Col>
@@ -430,6 +500,8 @@
           <Col id="nre">1</Col>
           <Col id="wre">1</Col>
           <Col id="caption_ko">유용한 기능</Col>
+          <Col id="caption_zh">实用程序</Col>
+          <Col id="caption_ja">ユーティリティ</Col>
         </Row>
         <Row>
           <Col id="id">040100</Col>
@@ -442,6 +514,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">다양한 팝업 표현</Col>
           <Col id="url">sample::popup.xfdl</Col>
+          <Col id="caption_zh">弹出式窗口</Col>
+          <Col id="caption_ja">ポップアップ</Col>
         </Row>
         <Row>
           <Col id="id">040200</Col>
@@ -454,6 +528,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">위젯</Col>
           <Col id="url">sample::widget.xfdl</Col>
+          <Col id="caption_zh">小部件</Col>
+          <Col id="caption_ja">ウィジェット</Col>
         </Row>
         <Row>
           <Col id="id">040300</Col>
@@ -466,6 +542,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">드래그 &amp; 드롭</Col>
           <Col id="url">sample::portlet.xfdl</Col>
+          <Col id="caption_zh">拖放和拖放</Col>
+          <Col id="caption_ja">ドラッグ&amp;ドロップ</Col>
         </Row>
         <Row>
           <Col id="id">040400</Col>
@@ -478,6 +556,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">웹 위젯</Col>
           <Col id="url">sample::personalization.xfdl</Col>
+          <Col id="caption_zh">Web 小部件</Col>
+          <Col id="caption_ja">Webウィジェット</Col>
         </Row>
         <Row>
           <Col id="id">040800</Col>
@@ -490,6 +570,8 @@
           <Col id="wre">1</Col>
           <Col id="nre">1</Col>
           <Col id="url">sample::hotkey.xfdl</Col>
+          <Col id="caption_zh">热键</Col>
+          <Col id="caption_ja">ホットキー</Col>
         </Row>
         <Row>
           <Col id="id">040500</Col>
@@ -502,6 +584,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">카카오톡 공유하기</Col>
           <Col id="url">sample::kakaotalk.xfdl</Col>
+          <Col id="caption_zh">Kakaotalk股份</Col>
+          <Col id="caption_ja">カカオトークシェア</Col>
         </Row>
         <Row>
           <Col id="id">040600</Col>
@@ -514,6 +598,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">RESTFul</Col>
           <Col id="url">sample::restful.xfdl</Col>
+          <Col id="caption_zh">RESTFUL</Col>
+          <Col id="caption_ja">レストフル</Col>
         </Row>
         <Row>
           <Col id="id">040700</Col>
@@ -526,6 +612,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">참조</Col>
           <Col id="url">sample::reference.xfdl</Col>
+          <Col id="caption_zh">参考资料</Col>
+          <Col id="caption_ja">参考文献</Col>
         </Row>
         <Row>
           <Col id="id">050000</Col>
@@ -537,6 +625,8 @@
           <Col id="nre">1</Col>
           <Col id="wre">1</Col>
           <Col id="caption_ko">연동/확장</Col>
+          <Col id="caption_zh">内线号码</Col>
+          <Col id="caption_ja">内線番号</Col>
         </Row>
         <Row>
           <Col id="id">050100</Col>
@@ -549,6 +639,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">차트</Col>
           <Col id="url">external::chart.xfdl</Col>
+          <Col id="caption_zh">图表</Col>
+          <Col id="caption_ja">チャート</Col>
         </Row>
         <Row>
           <Col id="id">050200</Col>
@@ -561,6 +653,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">차트 &amp; 그리드</Col>
           <Col id="url">external::chartngrid.xfdl</Col>
+          <Col id="caption_zh">图表和网格</Col>
+          <Col id="caption_ja">チャート&amp;グリッド</Col>
         </Row>
         <Row>
           <Col id="id">050300</Col>
@@ -573,6 +667,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">레포트</Col>
           <Col id="url">external::report.xfdl</Col>
+          <Col id="caption_zh">报告</Col>
+          <Col id="caption_ja">報告書</Col>
         </Row>
         <Row>
           <Col id="id">050400</Col>
@@ -585,6 +681,8 @@
           <Col id="wre">1</Col>
           <Col id="caption_ko">PDF 뷰어</Col>
           <Col id="url">external::pdfviewer.xfdl</Col>
+          <Col id="caption_zh">PDF 查看器</Col>
+          <Col id="caption_ja">PDFビューア</Col>
         </Row>
       </Rows>
     </Dataset>
