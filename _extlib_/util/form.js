@@ -298,13 +298,6 @@ nexacro.Form.prototype.openMenu = function (menuId) {
             leftButton = leftForm.components["btnMenu_" + menuId];
 
         if (leftButton) leftButton.click();
-
-        if (system.navigatorname.indexOf("nexacro") == -1) {
-            gtag('event', 'page_view', {
-                page_path: menuUrl,
-                page_title: menuName
-            });
-        }
     }
 };
 
