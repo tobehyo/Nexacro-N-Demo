@@ -11,7 +11,7 @@
 /*** Top Frame ***/
 .Static.sta_TF_logo
 {
-	background : url('imagerc::img_TF_logo.png') no-repeat center;
+	background : url('imagerc::img_TF_logo_nexacroN.png') no-repeat center / contain;
 	
 }
 .Button.btn_TF_topNav,
@@ -363,4 +363,59 @@
 	background : transparent;
 	-nexa-icon : url('imagerc::img_TF_function03E_M.png');	
 }
-]]></XCSS>
+
+.Button.btn_language_ko,
+.Button.btn_language_ko[status=focused],
+.Button.btn_language_ko[userstatus=pushed],
+.Button.btn_language_ko[userstatus=selected]
+{
+	-nexa-border : 0px none;
+	background : url('imagerc::img_language_flag_ko_32_L.png') no-repeat center center transparent;	
+}
+.Button.btn_language_ko[status=mouseover]
+{
+	-nexa-border : 0px none;
+	background : url('imagerc::img_language_flag_ko_32_L.png') no-repeat center center transparent;	
+}
+
+.Button.btn_language_en,
+.Button.btn_language_en[status=focused],
+.Button.btn_language_en[userstatus=pushed],
+.Button.btn_language_en[userstatus=selected]
+{
+	-nexa-border : 0px none;
+	background : url('imagerc::img_language_flag_en_32_L.png') no-repeat center center transparent;	
+}
+.Button.btn_language_en[status=mouseover]
+{
+	-nexa-border : 0px none;
+	background : url('imagerc::img_language_flag_en_32_L.png') no-repeat center center transparent;	
+}
+
+.Button.btn_language_zh,
+.Button.btn_language_zh[status=focused],
+.Button.btn_language_zh[userstatus=pushed],
+.Button.btn_language_zh[userstatus=selected]
+{
+	-nexa-border : 0px none;
+	background : url('imagerc::img_language_flag_zh_32_L.png') no-repeat center center transparent;	
+}
+.Button.btn_language_zh[status=mouseover]
+{
+	-nexa-border : 0px none;
+	background : url('imagerc::img_language_flag_zh_32_L.png') no-repeat center center transparent;	
+}
+
+.Button.btn_language_ja,
+.Button.btn_language_ja[status=focused],
+.Button.btn_language_ja[userstatus=pushed],
+.Button.btn_language_ja[userstatus=selected]
+{
+	-nexa-border : 0px none;
+	background : url('imagerc::img_language_flag_zh_32_L.png') no-repeat center center transparent;	
+}
+.Button.btn_language_ja[status=mouseover]
+{
+	-nexa-border : 0px none;
+	background : url('imagerc::img_language_flag_zh_32_L.png') no-repeat center center transparent;	
+}]]></XCSS>
