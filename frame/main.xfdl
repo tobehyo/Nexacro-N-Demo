@@ -83,20 +83,24 @@ this.getToay = function()
 
 this.getEventCookie = function(name)
 {
-	var result = "";
-	var flag = document.cookie.indexOf(name+'=');
-	if (flag != -1) {
-		flag += name.length + 1;
-		end = document.cookie.indexOf(';', flag);
+	if (system.navigatorname.indexOf("nexacro") === -1) {
+		var result = "";
+		var flag = document.cookie.indexOf(name+'=');
+		if (flag != -1) {
+			flag += name.length + 1;
+			end = document.cookie.indexOf(';', flag);
 
-		if (end == -1) end = document.cookie.length;
-		result = unescape(document.cookie.substring(flag, end))
+			if (end == -1) end = document.cookie.length;
+			result = unescape(document.cookie.substring(flag, end))
+		}
+		return result?result:"";
 	}
-	return result?result:"";
 };
 
 this.openEventPopup = function()
 {
+	return;
+
 	// 날짜체크하지 않음
 // 	var today = this.getToay(),
 // 		eventStartDt = "20210817",
