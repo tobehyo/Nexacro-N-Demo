@@ -136,18 +136,24 @@ this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 	this.gfnFormOnLoad();
 	
 	this.langCode = nexacro.getApplication().langCode;
+
+	// "gird.lagedata.searchtimeorg": "서버/네트워크시간 <fc v='#d7381e'>{{networkTime}}</fc> 초, 렌더링시간 <fc v='#d7381e'>{{renderTime}}</fc> 초, 조회건수 <fc v='#d7381e'>{{rowCount}}</fc> 건"
+	var args = {networkTime:0, renderTime:0, rowCount:0};
+	var txt = nexacro.getI18nText("message.network.render.time", args);	
+	this.stSearchTimeOrg.set_text(txt);
+	
 };
 
 this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	this.dsList.clearData();
 	
-	if (this.langCode == "ko") {
-		this.stSearchTimeOrg.set_text("서버/네트워크시간 <fc v='#d7381e'>0</fc> 초, 렌더링시간 <fc v='#d7381e'>0</fc> 초, 조회건수 <fc v='#d7381e'>0</fc> 건");
-	} else {
-		this.stSearchTimeOrg.set_text("Server/Network <fc v='#d7381e'>0</fc> sec, UI Rendering <fc v='#d7381e'>0</fc> sec, <fc v='#d7381e'>0</fc> rows");
-	}
-	
+// 	if (this.langCode == "ko") {
+// 		this.stSearchTimeOrg.set_text("서버/네트워크시간 <fc v='#d7381e'>0</fc> 초, 렌더링시간 <fc v='#d7381e'>0</fc> 초, 조회건수 <fc v='#d7381e'>0</fc> 건");
+// 	} else {
+// 		this.stSearchTimeOrg.set_text("Server/Network <fc v='#d7381e'>0</fc> sec, UI Rendering <fc v='#d7381e'>0</fc> sec, <fc v='#d7381e'>0</fc> rows");
+// 	}
+
 	var strSvcId = "search",
 		strSvcUrl = "svc::LargeDataAction.do",
 		inData = "",
@@ -170,11 +176,16 @@ this.fnCallback = function(svcId, errCode, errMsg, elapsedTime)
 			this.endtime = new Date();
 			var totaltime = nexacro.round((this.endtime - this.starttime) / 1000, 3),
 				nRowCount = this.dsList.rowcount;
-			if (this.langCode == "ko") {
-				this.stSearchTimeOrg.set_text("서버/네트워크시간 <fc v='#d7381e'>" + elapsedTime + "</fc> 초, 렌더링시간 <fc v='#d7381e'>" + nexacro.round(totaltime - elapsedTime, 3) + "</fc> 초, 조회건수 <fc v='#d7381e'>" +  this.gfnAppendComma(this.dsList.rowcount) + "</fc>" + " 건");
-			} else {
-				this.stSearchTimeOrg.set_text("Server/Network <fc v='#d7381e'>" + elapsedTime + "</fc> sec, UI Rendering <fc v='#d7381e'>" + nexacro.round(totaltime - elapsedTime, 3) + "</fc> sec, <fc v='#d7381e'>" +  this.gfnAppendComma(this.dsList.rowcount) + "</fc>" + " rows");
-			}
+// 			if (this.langCode == "ko") {
+// 				this.stSearchTimeOrg.set_text("서버/네트워크시간 <fc v='#d7381e'>" + elapsedTime + "</fc> 초, 렌더링시간 <fc v='#d7381e'>" + nexacro.round(totaltime - elapsedTime, 3) + "</fc> 초, 조회건수 <fc v='#d7381e'>" +  this.gfnAppendComma(this.dsList.rowcount) + "</fc>" + " 건");
+// 			} else {
+// 				this.stSearchTimeOrg.set_text("Server/Network <fc v='#d7381e'>" + elapsedTime + "</fc> sec, UI Rendering <fc v='#d7381e'>" + nexacro.round(totaltime - elapsedTime, 3) + "</fc> sec, <fc v='#d7381e'>" +  this.gfnAppendComma(this.dsList.rowcount) + "</fc>" + " rows");
+// 			}
+
+			var args = {networkTime:elapsedTime, renderTime:nexacro.round(totaltime - elapsedTime, 3), rowCount:this.gfnAppendComma(nRowCount)};
+			var txt = nexacro.getI18nText("message.network.render.time", args);	
+			this.stSearchTimeOrg.set_text(txt);
+
 		}
 	}
 }]]></Script>

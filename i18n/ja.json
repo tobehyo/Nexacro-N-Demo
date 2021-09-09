@@ -269,5 +269,6 @@
 	"external.report.autogrid.desc":"グリッドを自動解析してレポートを作成してくれる機能です。 ラジオボタンをクリックしてグリッドのフォーマットを変更し、「プレビュー」ボタンをクリックしてみてください。 フォーマット別にレポートファイルを作らなくてもUbiレポートが自動で作成してくれます。\nグリッドヘッドをドラッグ&ドロップして順序を変更するか、ヘッドクリックでデータを整列した後も「プレビュー」ボタンをクリックしてください。 画面に見えるままレポートが作られます。",
 	"external.report.autopivot.desc":"ピボットグリッドを自動解析しレポートを作成してくれる機能です。 ピボットの行/列、整列、フィルターなどの条件を変更し、「プレビュー」ボタンをクリックしてみてください。  画面に見えるままレポートが作られます。",
 	"external.pdfviewer":"PDFビューア",
-	"external.pdfviewer.desc":"PDF.jsまたはpdf.jsはウェブ標準遵守HTML5 Canvasを使って移植可能な文書形式ファイルをレンダリングするJavaScriptライブラリです。(URL: <l v='https://mozilla.github.io/pdf.js/'>https://mozilla.github.io/pdf.js/</l>) \n\nネックサークロのウェブブラウザコンポーネントで簡単に連動できます。"
+	"external.pdfviewer.desc":"PDF.jsまたはpdf.jsはウェブ標準遵守HTML5 Canvasを使って移植可能な文書形式ファイルをレンダリングするJavaScriptライブラリです。(URL: <l v='https://mozilla.github.io/pdf.js/'>https://mozilla.github.io/pdf.js/</l>) \n\nネックサークロのウェブブラウザコンポーネントで簡単に連動できます。",
+	"message.network.render.time": "サーバ/ネットワーク時間 <fc v='#d7381e'>{{networkTime}}</fc> 秒, レンダリング時間 <fc v='#d7381e'>{{renderTime}}</fc> 秒, 照会件数 <fc v='#d7381e'>{{rowCount}}</fc> 件"
 }

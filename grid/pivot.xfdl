@@ -266,11 +266,15 @@ this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 
 this.clearResult = function()
 {
-	if (this.langCode == "ko") {
-		this.Static00.set_text("서버/네트워크시간 <fc v='#d7381e'>0</fc> 초, 렌더링시간 <fc v='#d7381e'>0</fc> 초, 조회건수 <fc v='#d7381e'>0</fc> 건");
-	} else {
-		this.Static00.set_text("Server/Network <fc v='#d7381e'>0</fc> sec, UI Rendering <fc v='#d7381e'>0</fc> sec, <fc v='#d7381e'>0</fc> rows");
-	}
+// 	if (this.langCode == "ko") {
+// 		this.Static00.set_text("서버/네트워크시간 <fc v='#d7381e'>0</fc> 초, 렌더링시간 <fc v='#d7381e'>0</fc> 초, 조회건수 <fc v='#d7381e'>0</fc> 건");
+// 	} else {
+// 		this.Static00.set_text("Server/Network <fc v='#d7381e'>0</fc> sec, UI Rendering <fc v='#d7381e'>0</fc> sec, <fc v='#d7381e'>0</fc> rows");
+// 	}
+
+	var args = {networkTime:0, renderTime:0, rowCount:0};
+	var txt = nexacro.getI18nText("message.network.render.time", args);	
+	this.Static00.set_text(txt);
 };
 
 // 피벗 다국어처리
@@ -330,11 +334,15 @@ this.NxPivot00_onrender = function(obj:nexacro.NxPivot, e:nexacro.EventInfo)
 	var nTranTime = nexacro.round((this.endtime - this.starttime) / 1000, 3);
 	var nRenderTime = nexacro.round((this.rendertime - this.endtime) / 1000, 3);
 	
-	if (this.langCode == "ko") {
-		this.Static00.set_text("서버/네트워크시간 <fc v='#d7381e'>" + nTranTime + "</fc> 초, 렌더링시간 <fc v='#d7381e'>" + nRenderTime + "</fc> 초, 조회건수 <fc v='#d7381e'>" +  this.gfnAppendComma(this.dsList.rowcount) + "</fc>" + " 건");
-	} else {
-		this.Static00.set_text("Server/Network <fc v='#d7381e'>" + nTranTime + "</fc> sec, UI Rendering <fc v='#d7381e'>" + nRenderTime + "</fc> sec, <fc v='#d7381e'>" +  this.gfnAppendComma(this.dsList.rowcount) + "</fc>" + " rows");
-	}
+// 	if (this.langCode == "ko") {
+// 		this.Static00.set_text("서버/네트워크시간 <fc v='#d7381e'>" + nTranTime + "</fc> 초, 렌더링시간 <fc v='#d7381e'>" + nRenderTime + "</fc> 초, 조회건수 <fc v='#d7381e'>" +  this.gfnAppendComma(this.dsList.rowcount) + "</fc>" + " 건");
+// 	} else {
+// 		this.Static00.set_text("Server/Network <fc v='#d7381e'>" + nTranTime + "</fc> sec, UI Rendering <fc v='#d7381e'>" + nRenderTime + "</fc> sec, <fc v='#d7381e'>" +  this.gfnAppendComma(this.dsList.rowcount) + "</fc>" + " rows");
+// 	}
+
+	var args = {networkTime:nTranTime, renderTime:nRenderTime, rowCount:this.gfnAppendComma(this.dsList.rowcount)};
+	var txt = nexacro.getI18nText("message.network.render.time", args);	
+	this.Static00.set_text(txt);
 };
 
 this.Tab00_Tabpage1_Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)

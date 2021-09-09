@@ -269,5 +269,6 @@
 	"external.report.autogrid.desc":"自动解析网格并生成报告的功能。 点击广播按钮改变网格格式，点击'预览'按钮。 Ubi 报告会自动生成， 即使未按格式创建报告文件 。\n 网格头拖曳&拖曳改变顺序或通过点击头对数据进行排序后，点击'预览'按钮。 根据屏幕上看到的那样生成报告。",
 	"external.report.autopivot.desc":"自动解析并生成报告的功能。 请更改Peabt的行/列、排序、过滤等条件，点击'预览'按钮。  根据屏幕上看到的那样生成报告。",
 	"external.pdfviewer":"PDF查看器",
-	"external.pdfviewer.desc":"PDF.js 或 pdf.js 使用 Web 标准 HTML5 Canvas 绘制可移植文档类型文件的 JavaScript 库 。(URL: <l v='https://mozilla.github.io/pdf.js/'>https://mozilla.github.io/pdf.js/</l>) \n\n nexacro的浏览器编程， 可轻松绑定"
+	"external.pdfviewer.desc":"PDF.js 或 pdf.js 使用 Web 标准 HTML5 Canvas 绘制可移植文档类型文件的 JavaScript 库 。(URL: <l v='https://mozilla.github.io/pdf.js/'>https://mozilla.github.io/pdf.js/</l>) \n\n nexacro的浏览器编程， 可轻松绑定",
+	"message.network.render.time": "服务器/ 网络时间 <fc v='#d7381e'>{{networkTime}}</fc> 秒钟, 渲染时间 <fc v='#d7381e'>{{renderTime}}</fc> 秒钟, 查询次数 <fc v='#d7381e'>{{rowCount}}</fc> 件"
 }
