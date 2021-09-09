@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="GridFilterDiv" width="130" height="50" titletext="New Form" onload="GridFilterDiv_onload" onsize="GridFilterDiv_onsize" background="transparent">
     <Layouts>
       <Layout>
@@ -28,7 +28,7 @@
           </Layouts>
         </PopupDiv>
         <Calendar id="cal_filter" taborder="4" tabstop="false" oncloseup="cal_filter_oncloseup" left="0" top="90" width="94" height="28" borderRadius="0px"/>
-        <Button id="btn_filter" taborder="1" tabstop="false" onclick="btn_filter_onclick" left="78" top="16" width="34" height="34" cursor="hand" cssclass="GD_btnAdd_ft01" background="url('imagerc::grd_filter_combo.png') no-repeat center center #f3f7f7"/>
+        <Button id="btn_filter" taborder="1" tabstop="false" onclick="btn_filter_onclick" left="78" top="16" width="34" height="34" cursor="hand" cssclass="GD_btnAdd_ft01" background="#f3f7f7"/>
         <Edit id="edt_filter" taborder="2" onsetfocus="edt_filter_onsetfocus" onkillfocus="edt_filter_onkillfocus" onkeydown="edt_filter_onkeydown" left="1" top="17" width="76" height="28" background="rgba(255,255,255,1)" border="1px solid rgba(211,211,211,1)" borderRadius="0px"/>
       </Layout>
     </Layouts>
