@@ -185,7 +185,7 @@ this.fnAddFileList = function(filelists)
 this.fnUploadFile = function()
 {
 	//file upload
-	var uploadUrl = this.saveUrl +"service/fileUpload_postdatatest.jsp?filefolder=" + this.folderName;
+	var uploadUrl = this.saveUrl +"services/uploadFile?filefolder=" + this.folderName;
 	this.fileUpTrans.upload(uploadUrl);
 }
 
@@ -213,7 +213,7 @@ this.fnDownloadFile = function(i)
 		"fileSample"
 	);
 	
-	this.fileDownTrans.download(this.saveUrl + "service/fileDownload_postdatatest.jsp");
+	this.fileDownTrans.download(this.saveUrl + "services/downloadFile");
 }
 
 
@@ -247,7 +247,7 @@ this.fnDownloadFileAll = function()
 		arrNameList
 	);
 	
-	this.fileDownTrans.download(this.saveUrl + "service/fileDownload_postdatatestAll.jsp?filefolder=" + "fileSample");
+	this.fileDownTrans.download(this.saveUrl + "services/downloadFileAll?filefolder=" + this.folderName);
 }
 
 /**
@@ -360,7 +360,7 @@ this.btnSearch_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	//search attach file list
 	trace(this.saveUrl);
-	this.transaction("list", this.saveUrl + "service/fileDownload_servlet_list_XML.jsp", "", "dsDownload=dsList", "filefolder="+this.folderName, "fnCallbackTransaction", "false", "0")
+	this.transaction("list", this.saveUrl + "services/downloadFileList", "", "dsDownload=dsList", "filefolder="+this.folderName, "fnCallbackTransaction", "false", "0")
 };
 
 
@@ -381,7 +381,7 @@ this.btnDonwload_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 		}
 		else
 		{
-			var nRow = this.dsDownload.filterRow("CHK", 1);
+			var nRow = this.dsDownload.findRow("CHK", 1);
 			this.fnDownloadFile(nRow);
 		}
 	}
@@ -479,7 +479,7 @@ this.fileUpTrans_onsuccess = function(obj:nexacro.FileUpTransfer,e:nexacro.FileU
 {
 	this.setWaitCursor(false);
 	var objCallDs = e.datasets[0];
-trace("objCallDs:"+objCallDs);
+	trace("objCallDs:"+objCallDs);
 	for(var i=0; i<objCallDs.getRowCount(); i++)
 	{
 		this.dsUpload.setColumn(i, "FILE_URL",objCallDs.getColumn(i,"savePath"));

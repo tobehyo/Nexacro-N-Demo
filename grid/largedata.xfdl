@@ -155,7 +155,7 @@ this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 // 	}
 
 	var strSvcId = "search",
-		strSvcUrl = "svc::LargeDataAction.do",
+		strSvcUrl = "svc::services/largeData",
 		inData = "",
 		outData = "dsList=output",
 		strArg = "rowcount=" + nexacro.wrapQuote(this.Combo00.value),

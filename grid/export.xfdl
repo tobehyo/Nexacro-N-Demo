@@ -324,7 +324,9 @@ this.Tab00_Tabpage2_ListBox00_onitemchanged = function(obj:nexacro.ListBox,e:nex
 
 this.Tab00_Tabpage2_Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	this.FileDownTransfer00.download(nexacro.getApplication().webRootUrl+"ImportSample.xlsx");
+	var fileName = "ImportSample.xlsx";
+	this.FileDownTransfer00.set_downloadfilename(fileName)
+	this.FileDownTransfer00.download(nexacro.getApplication().webRootUrl+ "download/"+fileName);
 };
 
 this.ExcelExportObject00_onerror = function(obj:nexacro.ExcelExportObject,e:nexacro.ExcelExportErrorEventInfo)
