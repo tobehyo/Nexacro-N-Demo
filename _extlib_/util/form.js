@@ -237,6 +237,25 @@ nexacro.applyI18n = function (obj) {
 
     obj.resetScroll();
 };
+/**
+ * 
+ * @param {String} messageid 
+ * @param {Object} args replace key
+ * @param {Object} options set replace prefix and suffix
+ * @returns {String}
+ * @example JSON data is {"test.i18n.messageid" : "Hi {{name}}"}
+ * nexacro.getI18nText("test.i18n.messageid", {name: "Hello World"})
+ * expect output is "Hi Hello World"
+ */
+nexacro.getI18nText = function(messageid, args, options) {
+    var message = nexacro.getApplication().messages[messageid];
+    if(args) {
+        var regex = /{{(.*?)}}/g;
+        if(options && options.prefix && options.suffix) regex = new RegExp(options.prefix + "(.*?)" + options.suffix, "g");
+        return message.replace(regex, function(matchData, regGroupData) { return args[regGroupData] });
+    }
+    return message;
+}
 
 nexacro.Form.prototype.openMain = function () {
     var app = nexacro.getApplication(),
