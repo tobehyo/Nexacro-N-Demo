@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TypeDefinition version="2.3">
+<TypeDefinition version="3.0">
   <Modules>
     <Module url="CompBase.json"/>
     <Module url="ComComp.json"/>
@@ -81,6 +81,26 @@
   </Services>
   <Protocols/>
   <DeviceAdaptors/>
-  <Update/>
-  <Deploy/>
+  <Update>
+    <Os name="Windows" url="./" timeout="30" retry="3" autoupdate="auto" updatetype="server">
+      <Version name="common">
+        <Resource type="Module" file="nexacrolib.zip" version="0" targetpath="" description=""/>
+      </Version>
+      <Version name="Windows 10" enginesetupkey="{3D10EE09-348B-4B0B-AD04-69A3CE921D1C}">
+        <Resource type="Engine" file="NexacroN_DemoAppSetupRuntime_x86.exe" version="2021.09.02.01" targetpath="./"/>
+      </Version>
+      <Version name="Windows 8 / 8.1, Windows 7, Windows Vista, Windows Server 2003, Windows Server 2008, Windows Server 2012, Windows Server 2016" enginesetupkey="{3D10EE09-348B-4B0B-AD04-69A3CE921D1C}">
+        <Resource type="Engine" file="NexacroN_DemoAppSetupRuntime_x86.exe" version="2021.09.02.01" targetpath="./"/>
+      </Version>
+      <Version name="Windows 10 64bit" enginesetupkey="{3E221E7D-2ECF-4EF4-AD16-C69972112C86}">
+        <Resource type="Engine" file="NexacroN_DemoAppSetupRuntime_x64.exe" version="2021.09.02.01" targetpath="./"/>
+      </Version>
+      <Version name="Windows 8 / 8.1 64bit, Windows 7 64bit, Windows Vista 64bit, Windows Server 2003 64bit, Windows Server 2008 64bit, Windows Server 2012 64bit, Windows Server 2016 64bit" enginesetupkey="{3E221E7D-2ECF-4EF4-AD16-C69972112C86}">
+        <Resource type="Engine" file="NexacroN_DemoAppSetupRuntime_x64.exe" version="2021.09.02.01" targetpath="./"/>
+      </Version>
+    </Os>
+  </Update>
+  <Deploy>
+    <Os name="Windows"/>
+  </Deploy>
 </TypeDefinition>
