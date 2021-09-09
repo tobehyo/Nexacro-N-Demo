@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ADL version="2.0">
-  <Application id="Application" screenid="Mobile_screen,Desktop_screen" licenseurl="./nexacro17_client_license.xml" onload="Application_onload" onbeforeexit="Application_onbeforeexit">
+  <Application id="Application" screenid="Mobile_screen,Desktop_screen" licenseurl="./NexacroN_client_license.xml" onload="Application_onload" onbeforeexit="Application_onbeforeexit">
     <Layout>
       <MainFrame id="mainframe" width="480" height="768" showcascadetitletext="false" titletext="nexacro platform 17 Demo" border="1px solid #eeeeee" showtitlebar="true">
         <ChildFrame id="childframe" dragmovetype="none" showtitlebar="false"/>
@@ -15,20 +15,29 @@
   <Script type="xscript5.1"><![CDATA[
 this.Application_onload = function(obj:nexacro.Application,e:nexacro.LoadEventInfo)
 {
-	var projectUrl = nexacro.getProjectPath();
-	projectUrl = projectUrl.substring(0, projectUrl.lastIndexOf("/"));
-	projectUrl = projectUrl.substring(0, projectUrl.lastIndexOf("/")+1);
-	this.webRootUrl = projectUrl;
-	nexacro.getEnvironment().services["svc"].set_url(projectUrl);
-	projectUrl = projectUrl.substring(0, projectUrl.lastIndexOf("/"));
-	projectUrl = projectUrl.substring(0, projectUrl.lastIndexOf("/")+1);
-	nexacro.getEnvironment().services["xeni"].set_url(projectUrl + "nexacro17-xeni/");
+	// set service URL 
+	var objEnv = nexacro.getEnvironment();	
+	var urlPath = "http://localhost:8080/";	
+	var strPrjPath = nexacro.getProjectPath();
+	
+	if(strPrjPath.indexOf("os.tobesoft") !==-1) {
+		var parseURL = strPrjPath.split("/");
+		urlPath = parseURL[0] + "//" + parseURL[2] + "/";
+	}
+	this.webRootUrl = urlPath;
+ 	objEnv.services["svc"].set_url(urlPath);
+ 	//objEnv.services["xeni"].set_url(urlPath + "nexacro-xeni/");
+	objEnv.services["xeni"].set_url(urlPath + "");
 	
 	var privateData = nexacro.getPrivateProfile("privateData"),
 		langCode = "";
 	
 	if (nexacro.isEmpty(privateData)) {
-		langCode = system.locale.indexOf("ko")>-1?"ko":"en";
+		langCode = "en";
+		if(system.locale.indexOf("ko")>-1) langCode = "ko";
+		if(system.locale.indexOf("en")>-1) langCode = "en";
+		if(system.locale.indexOf("zh")>-1) langCode = "zh";
+		if(system.locale.indexOf("ja")>-1) langCode = "ja";
 	} else {
 		var data = JSON.parse(privateData);
 		langCode = this.langCode = data.langCode;
@@ -39,7 +48,7 @@ this.Application_onload = function(obj:nexacro.Application,e:nexacro.LoadEventIn
 	
 	this.changeLanguage(langCode);
 	
-	if (system.navigatorname != "nexacro") {
+	if (system.navigatorname.indexOf("nexacro") === -1) {
 		document.body.style.background = "none";
 		hide();
 	}
@@ -59,12 +68,16 @@ this.changeLanguage = function(langCode)
 {
 	this.langCode = langCode;
     var objEnv = nexacro.getEnvironment();
-	objEnv.set_locale(langCode=="ko"?"ko_KR":"en_US");
+	
+	if(langCode === "ko") objEnv.set_locale("ko_KR");
+	if(langCode === "zh") objEnv.set_locale("zh_CN");
+	if(langCode === "en") objEnv.set_locale("en_US");
+	if(langCode === "ja") objEnv.set_locale("ja_JP");
 	
 	var xhr = new XMLHttpRequest(),
 		pThis = this;
     
-	xhr.open("POST", "./i18n/"+langCode+".json");
+	xhr.open("GET", "./i18n/"+langCode+".json");
     xhr.send();
 	
     xhr.onreadystatechange = function() {
@@ -101,19 +114,15 @@ this.changeLanguage = function(langCode)
 				root.form.reload();
 			}
 			
-			pThis.langCode = langCode;
+			// Reload Mobile menu form
+			var popupFrames = nexacro.getPopupFrames();
+			if(popupFrames) {
+				for(var j=0; j<popupFrames.length; j++) {
+					if(popupFrames[j].form.name === "mobilemenu") popupFrames[j].form.reload();
+				}
+			}
 			
-// 			if (system.navigatorname.indexOf("nexacro") == -1) {
-// 				gtag('event', 'select_content', {
-// 					content_type: "changeLanguage",
-// 					items: [
-// 						{
-// 							id: langCode,
-// 							name: langCode=="ko"?"Korean":"English"
-// 						}
-// 					]
-// 				});
-// 			}
+			pThis.langCode = langCode;
 		}
 	};
 };

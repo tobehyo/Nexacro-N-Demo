@@ -5,8 +5,9 @@
       <Layout height="717" mobileorientation="landscape" width="480">
         <Button id="btnHome" taborder="0" left="2" top="2" width="60" height="60" cssclass="btn_MLF_homeBtn" onclick="btnHome_onclick"/>
         <Button id="btnClose" taborder="1" width="60" height="60" right="2" top="2" cssclass="btn_MLF_closeMenu" onclick="btnClose_onclick"/>
-        <Button id="btnLanguage" taborder="2" left="62" top="2" width="35" height="60" cssclass="btn_TF_function03_M" onclick="btnLanguage_onclick"/>
+        <Button id="btnLanguage" taborder="2" left="62" top="2" width="35" height="60" cssclass="btn_TF_function03_M" onclick="btnLanguage_onclick" visible="false"/>
         <Button id="btnTheme" taborder="3" left="97" top="2" width="35" height="60" cssclass="btn_TF_function02_M" onclick="btnTheme_onclick" visible="false"/>
+        <Div id="divLanguageMobile" taborder="4" text="Div00" left="62" top="2" width="35" height="60" url="frame::languageButton.xfdl" formscrolltype="none"/>
       </Layout>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.selectedMenu = "";

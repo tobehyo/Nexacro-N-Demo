@@ -10,15 +10,17 @@
         <Button id="btnBack" taborder="4" left="2" top="2" width="50" height="60" cssclass="btn_MTF_prevBtn" visible="false" onclick="btnBack_onclick" text=""/>
         <Button id="btnMobileMenu" taborder="5" top="2" width="60" height="60" right="2" cssclass="btn_MTF_menuBtn" visible="true" text="" onclick="btnMobileMenu_onclick"/>
         <Static id="stcTitle" taborder="6" left="62" top="2" width="208" height="60" cssclass="sta_MTF_title" visible="false" fittocontents="width" text=""/>
+        <Div id="divLanguage" taborder="7" text="Div00" left="1000" top="20" width="40" height="40" formscrolltype="none" url="frame::languageButton.xfdl" visible="false"/>
       </Layout>
       <Layout height="80" width="1263" name="large">
         <Static id="Static00" visible="true" left="0" top="15" width="200" height="50"/>
-        <Button id="btnLanguage" visible="true" left="1163" top="20" width="40" height="40"/>
+        <Button id="btnLanguage" visible="false" left="1163" top="20" width="40" height="40"/>
         <Button id="btnTheme" visible="false"/>
         <Button id="btnMegaMenu" visible="true"/>
         <Button id="btnBack" visible="false"/>
         <Static id="stcTitle" visible="false" left="62" top="2" width="208" height="60"/>
         <Button id="btnMobileMenu" visible="false"/>
+        <Div id="divLanguage" left="1163" top="20" width="40" height="40" visible="true"/>
       </Layout>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.buttonNames = [];
@@ -28,7 +30,7 @@ this.top_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 	nexacro._OnceCallbackTimer.callonce(this, function() { 
 		this.createMenuButton();
 	
-		this.btnLanguage.set_cssclass(nexacro.getApplication().langCode=="en"?"btn_TF_function03":"btn_TF_function03ENG");
+		//this.btnLanguage.set_cssclass(nexacro.getApplication().langCode=="en"?"btn_TF_function03":"btn_TF_function03ENG");
 			
 		if (system.navigatorname.indexOf("nexacro") == -1) {
 			var hash = MyHistory.getLocationHash(),
