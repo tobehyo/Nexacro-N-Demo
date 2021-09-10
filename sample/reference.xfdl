@@ -17,6 +17,20 @@
         <ImageViewer id="ImageViewer05" taborder="10" left="624" top="310" width="276" height="168" image="url('imagerc::education.png')" stretch="fixaspectratio" cursor="pointer" onclick="ImageViewer05_onclick"/>
         <Static id="Static05" taborder="11" text="Education Video" left="624" top="ImageViewer05:5" width="276" height="40"/>
       </Layout>
+      <Layout name="mobile" width="480" height="660" mobileorientation="portrait">
+        <ImageViewer id="ImageViewer00" left="20" top="76" height="140" right="51%"/>
+        <ImageViewer id="ImageViewer01" left="51%" top="76" height="140" right="20"/>
+        <Static id="Static01" left="252" top="ImageViewer01:5" height="40" right="20"/>
+        <ImageViewer id="ImageViewer03" left="20" top="455" height="140" right="51%"/>
+        <ImageViewer id="ImageViewer04" left="51%" top="455" height="140" right="20"/>
+        <ImageViewer id="ImageViewer05" left="51%" top="265" height="140" right="20"/>
+        <ImageViewer id="ImageViewer02" left="20" top="265" height="140" right="51%"/>
+        <Static id="Static00" width="210" left="20" top="ImageViewer00:5" height="40"/>
+        <Static id="Static03" width="210" left="20" top="ImageViewer03:5" height="40" text="Nexacro Showcase"/>
+        <Static id="Static04" left="250" top="ImageViewer04:5" height="40" right="20"/>
+        <Static id="Static05" left="250" top="ImageViewer05:5" height="40" right="20"/>
+        <Static id="Static02" width="210" left="20" top="ImageViewer02:5" height="40"/>
+      </Layout>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[
 this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
