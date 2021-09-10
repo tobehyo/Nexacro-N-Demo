@@ -370,12 +370,12 @@
 .Button.btn_language_ko[userstatus=selected]
 {
 	-nexa-border : 0px none;
-	background : url('imagerc::img_language_flag_ko_32_L.png') no-repeat center center transparent;	
+	background : url('imagerc::flag_korea.png') no-repeat center / contain;	
 }
 .Button.btn_language_ko[status=mouseover]
 {
 	-nexa-border : 0px none;
-	background : url('imagerc::img_language_flag_ko_32_L.png') no-repeat center center transparent;	
+	background : url('imagerc::flag_korea.png') no-repeat center / contain;	
 }
 
 .Button.btn_language_en,
@@ -384,12 +384,12 @@
 .Button.btn_language_en[userstatus=selected]
 {
 	-nexa-border : 0px none;
-	background : url('imagerc::img_language_flag_en_32_L.png') no-repeat center center transparent;	
+	background : url('imagerc::flag_usa.png') no-repeat center / contain;	
 }
 .Button.btn_language_en[status=mouseover]
 {
 	-nexa-border : 0px none;
-	background : url('imagerc::img_language_flag_en_32_L.png') no-repeat center center transparent;	
+	background : url('imagerc::flag_usa.png') no-repeat center / contain;	
 }
 
 .Button.btn_language_zh,
@@ -398,12 +398,12 @@
 .Button.btn_language_zh[userstatus=selected]
 {
 	-nexa-border : 0px none;
-	background : url('imagerc::img_language_flag_zh_32_L.png') no-repeat center center transparent;	
+	background : url('imagerc::flag_china.png') no-repeat center / contain;	
 }
 .Button.btn_language_zh[status=mouseover]
 {
 	-nexa-border : 0px none;
-	background : url('imagerc::img_language_flag_zh_32_L.png') no-repeat center center transparent;	
+	background : url('imagerc::flag_china.png') no-repeat center / contain;	
 }
 
 .Button.btn_language_ja,
@@ -412,10 +412,24 @@
 .Button.btn_language_ja[userstatus=selected]
 {
 	-nexa-border : 0px none;
-	background : url('imagerc::img_language_flag_zh_32_L.png') no-repeat center center transparent;	
+	background : url('imagerc::flag_japan.png') no-repeat center / contain;	
 }
 .Button.btn_language_ja[status=mouseover]
 {
 	-nexa-border : 0px none;
-	background : url('imagerc::img_language_flag_zh_32_L.png') no-repeat center center transparent;	
+	background : url('imagerc::flag_japan.png') no-repeat center / contain;	
+}
+
+.Button.btn_language,
+.Button.btn_language[status=focused],
+.Button.btn_language[userstatus=pushed],
+.Button.btn_language[userstatus=selected]
+{
+	-nexa-border : 0px none;
+	background : url('imagerc::language-icon-128-dark-blue.png') no-repeat center / contain;
+}
+.Button.btn_language[status=mouseover]
+{
+	-nexa-border : 0px none;
+	background : url('imagerc::language-icon-128-dark-blue.png') no-repeat center / contain;
 }]]></XCSS>

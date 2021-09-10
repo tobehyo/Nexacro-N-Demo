@@ -3,7 +3,7 @@
   <Form id="languageButton" width="40" height="40" titletext="New Form" onload="languageButton_onload">
     <Layouts>
       <Layout height="40" mobileorientation="portrait" width="40">
-        <Button id="btnLanguage" taborder="0" top="0" onclick="btnLanguage_onclick" left="0" visible="true" cssclass="btn_language_ko" right="0" bottom="0"/>
+        <Button id="btnLanguage" taborder="0" top="0" onclick="btnLanguage_onclick" left="0" visible="true" cssclass="btn_language" right="0" bottom="0"/>
         <PopupDiv id="popupDivFlag" text="PopupDiv00" visible="false" left="100" top="0" width="120" height="162" formscrolltype="none">
           <Layouts>
             <Layout>
@@ -72,10 +72,10 @@
     </Objects>
     <Script type="xscript5.1"><![CDATA[this.languageButton_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 {
-	var app = nexacro.getApplication();
-	if(app.langCode) {
-		this.btnLanguage.set_cssclass("btn_language_"+ app.langCode);
-	}	
+// 	var app = nexacro.getApplication();
+// 	if(app.langCode) {
+// 		this.btnLanguage.set_cssclass("btn_language_"+ app.langCode);
+// 	}	
 };
 
 this.btnLanguage_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
