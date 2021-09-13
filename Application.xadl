@@ -2,7 +2,7 @@
 <ADL version="2.0">
   <Application id="Application" screenid="Mobile_screen,Desktop_screen" licenseurl="./NexacroN_client_license.xml" onload="Application_onload" onbeforeexit="Application_onbeforeexit">
     <Layout>
-      <MainFrame id="mainframe" width="480" height="768" showcascadetitletext="false" titletext="nexacro platform 17 Demo" border="1px solid #eeeeee" showtitlebar="true">
+      <MainFrame id="mainframe" width="480" height="768" showcascadetitletext="false" titletext="Nexacro N Demo" border="1px solid #eeeeee" showtitlebar="true">
         <ChildFrame id="childframe" dragmovetype="none" showtitlebar="false"/>
       </MainFrame>
     </Layout>
@@ -19,15 +19,19 @@ this.Application_onload = function(obj:nexacro.Application,e:nexacro.LoadEventIn
 	var objEnv = nexacro.getEnvironment();	
 	var urlPath = "http://localhost:8080/";	
 	var strPrjPath = nexacro.getProjectPath();
-	
-	if(strPrjPath.indexOf("os.tobesoft") !==-1) {
-		var parseURL = strPrjPath.split("/");
-		urlPath = parseURL[0] + "//" + parseURL[2] + "/";
+
+	var parseURL = strPrjPath.split("/");
+	hostPath = parseURL[0] + "//" + parseURL[2] + "/";
+	this.webRootUrl = hostPath;
+
+	if(strPrjPath.indexOf("os.tobesoft.com") !==-1) {
+		urlPath = strPrjPath;
+		this.webRootUrl = urlPath;
 	}
-	this.webRootUrl = urlPath;
+	
  	objEnv.services["svc"].set_url(urlPath);
  	//objEnv.services["xeni"].set_url(urlPath + "nexacro-xeni/");
-	objEnv.services["xeni"].set_url(urlPath + "");
+	objEnv.services["xeni"].set_url(urlPath);
 	
 	var privateData = nexacro.getPrivateProfile("privateData"),
 		langCode = "";
