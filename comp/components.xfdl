@@ -146,7 +146,7 @@
             <Layout>
               <Static id="Static03_00" taborder="0" text="Textarea" left="30" top="8" height="30" cssclass="sta_WF_txt20px" right="30"/>
               <Static id="Static00" taborder="1" text="Static00" left="0" top="40" height="1" background="#e4e9f8" right="0"/>
-              <TextArea id="TextArea00" taborder="2" left="30" top="65" height="190" right="30" value="nexacro platform Overview&#10;&#10;UI/UX development platform that provides a system development environment optimized for businesses.&#10;Unified Framework-based HTML5 solution that ensures the best performance and speed.&#10;A WYSIWYG-based development tool ‘nexacro studio’ and a full array of UI/UX components.&#10;No-Download, No-Install, One Source Multi-Use support.&#10;" wordWrap="english"/>
+              <TextArea id="TextArea00" taborder="2" left="30" top="65" height="190" right="30" value="Nexacro Overview&#10;&#10;UI/UX development platform that provides a system development environment optimized for businesses.&#10;Unified Framework-based HTML5 solution that ensures the best performance and speed.&#10;A WYSIWYG-based development tool ‘nexacro studio’ and a full array of UI/UX components.&#10;No-Download, No-Install, One Source Multi-Use support.&#10;" wordWrap="english"/>
             </Layout>
           </Layouts>
         </Div>

@@ -11,7 +11,7 @@
         <ImageViewer id="ImageViewer02" taborder="6" left="624" top="76" height="168" image="url('imagerc::playnexacro.png')" stretch="fixaspectratio" cursor="pointer" onclick="ImageViewer02_onclick" width="276"/>
         <Static id="Static02" taborder="5" text="Commnunity(play nexacro)" left="624" top="ImageViewer02:5" width="276" height="40"/>
         <ImageViewer id="ImageViewer03" taborder="12" left="20" top="310" width="276" height="168" image="url('imagerc::showcase.png')" stretch="fixaspectratio" cursor="pointer" text="" onclick="ImageViewer03_onclick"/>
-        <Static id="Static03" taborder="7" text="nexacro platform Showcase" left="20" top="ImageViewer03:5" width="276" height="40"/>
+        <Static id="Static03" taborder="7" text="Nexacro Showcase" left="20" top="ImageViewer03:5" width="276" height="40"/>
         <ImageViewer id="ImageViewer04" taborder="8" left="322" top="310" width="276" height="168" image="url('imagerc::developer_guide.png')" stretch="fixaspectratio" cursor="pointer" text="" onclick="ImageViewer04_onclick"/>
         <Static id="Static04" taborder="9" text="Developer Guide Sample" left="322" top="ImageViewer04:5" width="276" height="40"/>
         <ImageViewer id="ImageViewer05" taborder="10" left="624" top="310" width="276" height="168" image="url('imagerc::education.png')" stretch="fixaspectratio" cursor="pointer" onclick="ImageViewer05_onclick"/>
@@ -55,12 +55,13 @@ this.ImageViewer02_onclick = function(obj:nexacro.ImageViewer,e:nexacro.ClickEve
 
 this.ImageViewer03_onclick = function(obj:nexacro.ImageViewer,e:nexacro.ClickEventInfo)
 {
-	system.execDefaultBrowser("http://support.tobesoft.co.kr/Next_JSP/nexacro17_deploy/Showcase/launch.html");
+	system.execDefaultBrowser("http://support.tobesoft.co.kr/Next_JSP/NexacroN_deploy/index.html");
 };
 
 this.ImageViewer04_onclick = function(obj:nexacro.ImageViewer,e:nexacro.ClickEventInfo)
 {
-	system.execDefaultBrowser("http://demo.nexacro.com/developer_guide/17/guide.html");
+	if(nexacro.getApplication().langCode === "zh") return system.execDefaultBrowser("http://docs.tobesoft.com/advanced_development_guide_nexacro_n_zh");
+	system.execDefaultBrowser("http://docs.tobesoft.com/advanced_development_guide_nexacro_n_ko");
 };
 
 this.ImageViewer05_onclick = function(obj:nexacro.ImageViewer,e:nexacro.ClickEventInfo)
