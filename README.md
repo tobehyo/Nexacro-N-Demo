@@ -12,13 +12,13 @@
    git clone https://github.com/tobehyo/nexacro-n-demo.git
    ```
    *다운로드한 파일은 압축해제 합니다.*
-- 넥사크로 스튜디오를 통해 demo-2020.xprj 파일을 오픈합니다.
+- 넥사크로 스튜디오를 통해 `demo-2020.xprj` 파일을 오픈합니다.
 ##### 🌠Nexacro Studio Getting Started Tutorial - [http://docs.tobesoft.com/getting_started_nexacro_n_ko#1a8c8e68a182acba](http://docs.tobesoft.com/getting_started_nexacro_n_ko#1a8c8e68a182acba)
 
 ## Demo Project Information
 
 #### 백엔드 호출 URL(aka Service URL) 설정
-- Application onload 이벤트에서 서비스 URL를 재정의하고 있습니다.
+- Application `onload` 이벤트에서 서비스 URL를 재정의하고 있습니다.
 ``` js
 this.Application_onload = function(obj:nexacro.Application,e:nexacro.LoadEventInfo)
 {
@@ -69,7 +69,7 @@ this.changeLanguage = function(langCode)
 ```
 
 #### 다국어 처리
-- form의 공통함수인 `gfnFormOnLoad` 함수를 form의 onload 이벤트에서 호출하며 다국어를 설정합니다.
+- form의 공통함수인 `gfnFormOnLoad` 함수를 form의 `onload` 이벤트에서 호출하며 다국어를 설정합니다.
   > #### 메세지 설정은 컴포넌트의 User Properties 항목에 messageid 추가하여 설정합니다.
 ``` js
 nexacro.Form.prototype.gfnFormOnLoad = function () {
