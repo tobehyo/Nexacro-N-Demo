@@ -2,6 +2,9 @@
 > ###### 이 저장소의 데모 샘플은 투비소프트 중국 법인에서 활용할 목적으로 playnexacro에서 제공하고 있는 [Nexacro 17 demo](https://demo.nexacroplatform.com/)를 수정한 샘플입니다.
 > ###### 다국어의 경우 기계번역을 사용하였으며 잘못 된 번역이 포함 되어 있습니다.
 
+## Demo Live  
+[https://os.tobesoft.com/nexacrodemo](https://os.tobesoft.com/nexacrodemo)
+
 ## Getting started
 
 - 이 저장소를 복제(Clone) 혹은 [다운로드](https://github.com/tobehyo/nexacro-n-demo/archive/refs/heads/main.zip) 합니다.       
@@ -93,3 +96,7 @@ nexacro.Form.prototype.gfnFormOnLoad = function () {
 #### 폰트 적용
 - 폰트는 Noto Sans KR 이 적용 되어있으며 변경은 넥사크로 스튜디오의 Resource의 `UserFont` 메뉴에서 NotoSans.xfont 수정하거나 새로운 user font 를 생성하여 사용할 수 있습니다.  
 > User Font 생성 방법 [http://docs.tobesoft.com/development_tools_guide_nexacro_n_ko#255e13d5d5644cb9](http://docs.tobesoft.com/development_tools_guide_nexacro_n_ko#255e13d5d5644cb9)
+
+## Download Nexacro N XAPI in Spring Boot Demo
+[Nexacro N XAPI in Spring Boot Project](https://github.com/tobehyo/nexacro-n-spring-boot) Repository  
+Download [Nexacro N XAPI Demo](https://github.com/tobehyo/nexacro-n-spring-boot/archive/refs/heads/main.zip)
