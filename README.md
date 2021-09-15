@@ -17,7 +17,7 @@
 
 ## Demo Project Information
 
-#### 백엔드 호출 URL(aka Service URL) 설정
+#### 👉 백엔드 호출 URL(aka Service URL) 설정
 - Application `onload` 이벤트에서 서비스 URL를 재정의하고 있습니다.
 ``` js
 this.Application_onload = function(obj:nexacro.Application,e:nexacro.LoadEventInfo)
@@ -42,7 +42,7 @@ this.Application_onload = function(obj:nexacro.Application,e:nexacro.LoadEventIn
 };
 ```
 
-#### Nav 메뉴 노출
+#### 👉 Nav 메뉴 노출
 - Global dataset(`gdsAllMenu`)에서 메뉴를 관리하며 `gdsAllMenu` dataset 내용을 filter 후 `gdsMenu` 저장하여 처리합니다.
 ``` js
 this.changeLanguage = function(langCode)
@@ -68,7 +68,7 @@ this.changeLanguage = function(langCode)
 };
 ```
 
-#### 다국어 처리
+#### 👉 다국어 처리
 - form의 공통함수인 `gfnFormOnLoad` 함수를 form의 `onload` 이벤트에서 호출하며 다국어를 설정합니다.
   > #### 메세지 설정은 컴포넌트의 User Properties 항목에 messageid 추가하여 설정합니다.
 ``` js
@@ -80,7 +80,7 @@ nexacro.Form.prototype.gfnFormOnLoad = function () {
       p["mainPageOnLoad"].call(p, height);
   }, this);
 
-  // 다국어 호출
+  // 다국어 적용
   nexacro.applyI18n(this);
 
   var p = this.parent.parent,
@@ -93,9 +93,14 @@ nexacro.Form.prototype.gfnFormOnLoad = function () {
 };
 ```
 
-#### 폰트 적용
+#### 👉 Pivot Grid 다국어 메세지 변경
+- `_extlib_\pivot\NxPivot.message.js` 파일에서 메세지를 변경하시면 됩니다.  
+
+#### 👉 폰트 적용
 - 폰트는 Noto Sans KR 이 적용 되어있으며 변경은 넥사크로 스튜디오의 Resource의 `UserFont` 메뉴에서 NotoSans.xfont 수정하거나 새로운 user font 를 생성하여 사용할 수 있습니다.  
-> User Font 생성 방법 [http://docs.tobesoft.com/development_tools_guide_nexacro_n_ko#255e13d5d5644cb9](http://docs.tobesoft.com/development_tools_guide_nexacro_n_ko#255e13d5d5644cb9)
+
+> User Font 생성 방법 [http://docs.tobesoft.com/development_tools_guide_nexacro_n_ko#255e13d5d5644cb9](http://docs.tobesoft.com/development_tools_guide_nexacro_n_ko#255e13d5d5644cb9)  
+
 
 ## Download Nexacro N XAPI in Spring Boot Demo
 [Nexacro N XAPI in Spring Boot Project](https://github.com/tobehyo/nexacro-n-spring-boot) Repository  
