@@ -94,7 +94,7 @@ nexacro.Form.prototype.gfnFormOnLoad = function () {
 ```
 
 #### 👉 Pivot Grid 다국어 메세지 변경
-- `_extlib_\pivot\NxPivot.message.js` 파일에서 메세지를 변경하시면 됩니다.  
+- `_extlib_\pivot\NxPivot.message.js` 파일에서 메세지를 변경하면 됩니다.  
 
 #### 👉 폰트 적용
 - 폰트는 Noto Sans KR 이 적용 되어있으며 변경은 넥사크로 스튜디오의 Resource의 `UserFont` 메뉴에서 NotoSans.xfont 수정하거나 새로운 user font 를 생성하여 사용할 수 있습니다.  
