@@ -21,7 +21,9 @@ nexacro.NxPivot.Message.prototype = _pMessage;
  */
 _pMessage.language = {
 	en_us:{},
-	ko_kr:{}
+	ko_kr:{},
+	zh_cn:{},
+	ja_jp:{}
 };
 
 /**
@@ -428,6 +430,408 @@ _pMessage.language.ko_kr.message = {
 	validate : [
 		{key : "0001", text : "메시지코드 '{0}' 가 존재하지 않습니다."},
 		{key : "0002", text : "시작날짜가 종료날짜보다 큽니다."}
+	]
+}
+
+/**
+ * 필터조건 종류(중문)
+ * @name language.zh_cn.filter
+ * @property {array} number - 숫자
+ * @property {array} string - 문자열
+ * @property {array} date - 날짜
+ * @memberof nexacro.NxPivot.Message
+ */
+ _pMessage.language.zh_cn.filter = {
+	number: [
+		 {key: "lt",
+		  text:"少于"
+		 },
+		 {key: "gt",
+		  text:"比...更棒"
+		 },
+		 {key: "leq",
+		  text:"小于或等于"
+		 },
+		 {key: "geq",
+		  text:"大于或等于"
+		 },
+		 {key: "eq",
+		  text:"平等的"
+		 },
+		 {key: "neq",
+		  text:"不平等"
+		 }
+	],
+	
+	string: [
+		 {key: "ct",
+		  text:"包含"
+		 },
+		 {key: "nct",
+		  text:"不包含"
+		 },
+		 {key: "eq",
+		  text:"平等的"
+		 },
+		 {key: "neq",
+		  text:"不平等"
+		 }
+	],
+	
+	date: [
+		{key: "between",
+		 text:"之间"	
+		},
+		{key: "geq",
+		 text:"后"	
+		},
+		{key: "leq",
+		 text:"前"	
+		},
+		{key: "eq",
+		 text:"平等的"	
+		}
+	]
+};
+
+/**
+ * 셋팅관련 코드(중문)
+ * @name language.zh_cn.setting
+ * @property {array} checkflag - 필터팝업 그리드 Head
+ * @property {array} filter - 필터조건 "없음"
+ * @property {array} aggregator - 집계종류
+ * @property {array} itemList - 필터팝업 관련
+ * @property {array} viewDetails - 상세보기팝업 관련
+ * @memberof nexacro.NxPivot.Message
+ */
+_pMessage.language.zh_cn.setting = {
+	checkflag : [
+		{key : "uncheckall", text : "全部清除"},
+		{key : "checkall", text : "全部选择"}
+	],
+	
+	filter : [
+		{key : "", text : "否"}
+	],
+	
+	aggregator : [
+		{key : "sum", text : "总和"},
+		{key : "avg", text : "平均值"},
+		{key : "cnt", text : "CNT"},
+		{key : "min", text : "闽"},
+		{key : "max", text : "最大值"}
+	],
+	
+	itemList : [
+		{key : "filterTitle", text : "过滤器"},
+		{key : "search", text : "搜索"},
+		{key : "submit", text : "提交"},
+		{key : "close", text : "关闭"}
+	],
+	viewDetails : [
+		{key : "viewDetails", text : "查看详细信息"}
+	]
+}
+
+/**
+ * Axis 종류 코드(중문)
+ * @name language.zh_cn.axisArea
+ * @property {array} types - Axis 종류
+ * @memberof nexacro.NxPivot.Message
+ */
+_pMessage.language.zh_cn.axisArea = {
+	types : [
+		{key : "fields", text : "全部的"},
+		{key : "colAxis", text : "栏目"},
+		{key : "rowAxis", text : "行数"},
+		{key : "values", text : "价值观"}
+	]
+}
+
+/**
+ * Toolbar 버튼 관련 코드(중문)
+ * @name language.zh_cn.toolbar
+ * @property {array} buttonaligntype - Toolbar Button 정렬
+ * @property {array} buttontypes - Toolbar Button 종류
+ * @memberof nexacro.NxPivot.Message
+ */
+_pMessage.language.zh_cn.toolbar = {
+	buttonaligntype : [
+		{key : "left-top", text : "LEFT&TOP"},
+		{key : "right-bottom", text : "RIGHT|BOTTOM"}
+	],
+	buttontypes : [
+		{key : "toolbarstatus", text : "hide,show", toggleflag : "show,hide"},
+		{key : "rowsstatus", text : "collapse,expand", toggleflag : "expand,collapse"},
+		{key : "columnsstatus", text : "collapse,expand", toggleflag : "expand,collapse"},
+		{key : "autoexecute", text : "manual,auto", toggleflag : "manual,auto"},
+		{key : "initialization", text : "init"},
+		{key : "execute", text : "execute"}
+	]
+}
+
+/**
+ * 팝업관련 코드(중문)
+ * @name language.zh_cn.settingPopList
+ * @property {array} rowCol - 셋팅팝업 리스트
+ * @memberof nexacro.NxPivot.Message
+ */
+_pMessage.language.zh_cn.settingPopList = {
+	rowCol : [
+		{key : "asc", text : "Sort A to Z"},
+		{key : "desc", text : "Sort Z to A"},
+		{key : "clearfilter", text : "Clear filter from"},
+		{key : "addfilter", text : "Label filters"}
+	]
+}
+
+/**
+ * 팝업관련 코드(중문)
+ * @name language.zh_cn.message
+ * @property {array} error - 에러 메시지
+ * @property {array} validate - validate 메시지
+ * @memberof nexacro.NxPivot.Message
+ */
+_pMessage.language.zh_cn.message = {
+	error : [
+		{key : "0001", text : "Error statuscode '{0}' is not exist"},	//common
+		{key : "1001", text : "[Error] {0} > Invalid filter type. type = {1}"},	//pivot
+		{key : "1002", text : "[Error] {0} > values is empty."},
+		{key : "1003", text : "[Error] {0} > Invalid operation. operation = {1}"},
+		{key : "1004", text : "[Error] {0} > Invalid values. values = {1}"},
+		{key : "1005", text : "[Error] {0} > Invalid date range. values = {1}"},
+		{key : "1006", text : "[Error] pivotUtil.sortAxis > Invalid staus. node or fields is not INIT."},
+		{key : "1007", text : "[Error] pivotUtil.setFilterData(): Invalid id. id={0}"},
+		{key : "1008", text : "Aggregator '{0}' is undefined !!"},
+		{key : "1009", text : "Invalid Item filter values."},
+		{key : "2001", text : "The config arguments is required."},	//config
+		{key : "2002", text : "{0} is Empty!. language= {1}"},
+		{key : "2003", text : "{0}.aggregator is Empty!. language= {1}"},
+		{key : "2004", text : "{0} is Empty!. id= {1}"},
+		{key : "2005", text : "[Error] invalid aggregator! aggregator={0},  id= {1}"},
+		{key : "2006", text : "{0} 'name' is Empty!. id= {1}"},
+		{key : "2007", text : "{0} 'func' is Empty!. id= {1}"},
+		{key : "2008", text : "{0} 'func' is not function!. id= {1}"},
+		{key : "2009", text : "{0} PARAM is not array. list= {1}"},
+		{key : "2010", text : "{0} value is not object. list[{1}]= {2}"},
+		{key : "2011", text : "{0} ID({1}) is not exist!"},
+		{key : "2012", text : "{0} Invalid sortText. sortText={1}"},
+		{key : "2013", text : "[Error] config.setFilterInfo > PARAM is not array. list= {0}"},
+		{key : "2014", text : "{0} value is not object. list[{1}]= {2}"},
+		{key : "2015", text : "{0} ID({1}) is not exist!"},
+		{key : "2016", text : "{0} operation property is not exist! id= {1}"},
+		{key : "2017", text : "{0} values property is not Array! id= {1}"},
+		{key : "2018", text : "{0} values property is empty id= {1}"},
+		{key : "3001", text : ""},	//view
+		{key : "4001", text : "Invalid Panel Type."},	//panel
+		{key : "4002", text : "Panel undefined."},
+		{key : "4003", text : "Invalid PopupDiv Component."},
+		{key : "5001", text : "'{0}' aggregator '{1}' is undefined."}	//item
+	],
+	validate : [
+		{key : "0001", text : "Message statuscode '{0}' is not exist"},
+		{key : "0002", text : "Start date is greater than end date."}
+	]
+}
+
+/**
+ * 필터조건 종류(일문)
+ * @name language.ja_jp.filter
+ * @property {array} number - 숫자
+ * @property {array} string - 문자열
+ * @property {array} date - 날짜
+ * @memberof nexacro.NxPivot.Message
+ */
+ _pMessage.language.ja_jp.filter = {
+	number: [
+		 {key: "lt",
+		  text:"未満"
+		 },
+		 {key: "gt",
+		  text:"より大きい"
+		 },
+		 {key: "leq",
+		  text:"以下のもの"
+		 },
+		 {key: "geq",
+		  text:"以上のもの以上"
+		 },
+		 {key: "eq",
+		  text:"同等"
+		 },
+		 {key: "neq",
+		  text:"等しくない"
+		 }
+	],
+	
+	string: [
+		 {key: "ct",
+		  text:"含まれています"
+		 },
+		 {key: "nct",
+		  text:"含まれていません"
+		 },
+		 {key: "eq",
+		  text:"同等"
+		 },
+		 {key: "neq",
+		  text:"等しくない"
+		 }
+	],
+	
+	date: [
+		{key: "between",
+		 text:"間"	
+		},
+		{key: "geq",
+		 text:"後"	
+		},
+		{key: "leq",
+		 text:"前"	
+		},
+		{key: "eq",
+		 text:"同等"	
+		}
+	]
+};
+
+/**
+ * 셋팅관련 코드(일문)
+ * @name language.ja_jp.setting
+ * @property {array} checkflag - 필터팝업 그리드 Head
+ * @property {array} filter - 필터조건 "없음"
+ * @property {array} aggregator - 집계종류
+ * @property {array} itemList - 필터팝업 관련
+ * @property {array} viewDetails - 상세보기팝업 관련
+ * @memberof nexacro.NxPivot.Message
+ */
+_pMessage.language.ja_jp.setting = {
+	checkflag : [
+		{key : "uncheckall", text : "すべてクリア"},
+		{key : "checkall", text : "すべて選択"}
+	],
+	
+	filter : [
+		{key : "", text : "いいえ"}
+	],
+	
+	aggregator : [
+		{key : "sum", text : "合計"},
+		{key : "avg", text : "平均値"},
+		{key : "cnt", text : "CNT"},
+		{key : "min", text : "分"},
+		{key : "max", text : "最大"}
+	],
+	
+	itemList : [
+		{key : "filterTitle", text : "フィルタ"},
+		{key : "search", text : "検索"},
+		{key : "submit", text : "提出する"},
+		{key : "close", text : "閉じる"}
+	],
+	viewDetails : [
+		{key : "viewDetails", text : "詳細の表示"}
+	]
+}
+
+/**
+ * Axis 종류 코드(일문)
+ * @name language.ja_jp.axisArea
+ * @property {array} types - Axis 종류
+ * @memberof nexacro.NxPivot.Message
+ */
+_pMessage.language.ja_jp.axisArea = {
+	types : [
+		{key : "fields", text : "すべて"},
+		{key : "colAxis", text : "カラム"},
+		{key : "rowAxis", text : "行"},
+		{key : "values", text : "値"}
+	]
+}
+
+/**
+ * Toolbar 버튼 관련 코드(일문)
+ * @name language.ja_jp.toolbar
+ * @property {array} buttonaligntype - Toolbar Button 정렬
+ * @property {array} buttontypes - Toolbar Button 종류
+ * @memberof nexacro.NxPivot.Message
+ */
+_pMessage.language.ja_jp.toolbar = {
+	buttonaligntype : [
+		{key : "left-top", text : "LEFT&TOP"},
+		{key : "right-bottom", text : "RIGHT|BOTTOM"}
+	],
+	buttontypes : [
+		{key : "toolbarstatus", text : "hide,show", toggleflag : "show,hide"},
+		{key : "rowsstatus", text : "collapse,expand", toggleflag : "expand,collapse"},
+		{key : "columnsstatus", text : "collapse,expand", toggleflag : "expand,collapse"},
+		{key : "autoexecute", text : "manual,auto", toggleflag : "manual,auto"},
+		{key : "initialization", text : "init"},
+		{key : "execute", text : "execute"}
+	]
+}
+
+/**
+ * 팝업관련 코드(일문)
+ * @name language.ja_jp.settingPopList
+ * @property {array} rowCol - 셋팅팝업 리스트
+ * @memberof nexacro.NxPivot.Message
+ */
+_pMessage.language.ja_jp.settingPopList = {
+	rowCol : [
+		{key : "asc", text : "Sort A to Z"},
+		{key : "desc", text : "Sort Z to A"},
+		{key : "clearfilter", text : "Clear filter from"},
+		{key : "addfilter", text : "Label filters"}
+	]
+}
+
+/**
+ * 팝업관련 코드(일문)
+ * @name language.ja_jp.message
+ * @property {array} error - 에러 메시지
+ * @property {array} validate - validate 메시지
+ * @memberof nexacro.NxPivot.Message
+ */
+_pMessage.language.ja_jp.message = {
+	error : [
+		{key : "0001", text : "Error statuscode '{0}' is not exist"},	//common
+		{key : "1001", text : "[Error] {0} > Invalid filter type. type = {1}"},	//pivot
+		{key : "1002", text : "[Error] {0} > values is empty."},
+		{key : "1003", text : "[Error] {0} > Invalid operation. operation = {1}"},
+		{key : "1004", text : "[Error] {0} > Invalid values. values = {1}"},
+		{key : "1005", text : "[Error] {0} > Invalid date range. values = {1}"},
+		{key : "1006", text : "[Error] pivotUtil.sortAxis > Invalid staus. node or fields is not INIT."},
+		{key : "1007", text : "[Error] pivotUtil.setFilterData(): Invalid id. id={0}"},
+		{key : "1008", text : "Aggregator '{0}' is undefined !!"},
+		{key : "1009", text : "Invalid Item filter values."},
+		{key : "2001", text : "The config arguments is required."},	//config
+		{key : "2002", text : "{0} is Empty!. language= {1}"},
+		{key : "2003", text : "{0}.aggregator is Empty!. language= {1}"},
+		{key : "2004", text : "{0} is Empty!. id= {1}"},
+		{key : "2005", text : "[Error] invalid aggregator! aggregator={0},  id= {1}"},
+		{key : "2006", text : "{0} 'name' is Empty!. id= {1}"},
+		{key : "2007", text : "{0} 'func' is Empty!. id= {1}"},
+		{key : "2008", text : "{0} 'func' is not function!. id= {1}"},
+		{key : "2009", text : "{0} PARAM is not array. list= {1}"},
+		{key : "2010", text : "{0} value is not object. list[{1}]= {2}"},
+		{key : "2011", text : "{0} ID({1}) is not exist!"},
+		{key : "2012", text : "{0} Invalid sortText. sortText={1}"},
+		{key : "2013", text : "[Error] config.setFilterInfo > PARAM is not array. list= {0}"},
+		{key : "2014", text : "{0} value is not object. list[{1}]= {2}"},
+		{key : "2015", text : "{0} ID({1}) is not exist!"},
+		{key : "2016", text : "{0} operation property is not exist! id= {1}"},
+		{key : "2017", text : "{0} values property is not Array! id= {1}"},
+		{key : "2018", text : "{0} values property is empty id= {1}"},
+		{key : "3001", text : ""},	//view
+		{key : "4001", text : "Invalid Panel Type."},	//panel
+		{key : "4002", text : "Panel undefined."},
+		{key : "4003", text : "Invalid PopupDiv Component."},
+		{key : "5001", text : "'{0}' aggregator '{1}' is undefined."}	//item
+	],
+	validate : [
+		{key : "0001", text : "Message statuscode '{0}' is not exist"},
+		{key : "0002", text : "Start date is greater than end date."}
 	]
 }
 

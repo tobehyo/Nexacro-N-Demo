@@ -261,7 +261,12 @@ this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 	this.clearResult();
 	
 	// 피벗 다국어 처리
-	this.gfnChangeLanguage(this.NxPivot00, this.langCode == "ko" ? "ko_kr" : "en_us");
+	var pivotLanguageCode = "en_us";
+	if(this.langCode === "ko") pivotLanguageCode = "ko_kr";
+	if(this.langCode === "en") pivotLanguageCode = "en_us";
+	if(this.langCode === "zh") pivotLanguageCode = "zh_cn";
+	if(this.langCode === "ja") pivotLanguageCode = "ja_jp";
+	this.gfnChangeLanguage(this.NxPivot00, pivotLanguageCode);
 };
 
 this.clearResult = function()
